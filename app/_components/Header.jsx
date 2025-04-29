@@ -81,26 +81,23 @@ const Header = () => {
 
   return (
     <div className="bg-gray-100">
-      <header className=" container">
-        <nav
-          aria-label="Global"
-          className="mx-auto flex max-w-6xl items-center justify-between p-6 "
-        >
-          {/* ****************************** */}
-          <div className="flex lg:flex-1">
+      <header className="container">
+        <nav className="mx-auto max-w-6xl p-6 flex items-center justify-between flex-wrap lg:flex-nowrap">
+          {/* Logo */}
+          <div className="flex flex-1">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 alt=""
                 src="/logo.png"
-                className=""
                 width={120}
                 height={80}
+                className=""
               />
             </a>
           </div>
 
-          {/* ****************************** */}
+          {/* Mobile Menu Button */}
           <div className="flex lg:hidden">
             <button
               type="button"
@@ -112,37 +109,37 @@ const Header = () => {
             </button>
           </div>
 
-          {/* ****************************** */}
+          {/* Desktop Nav Links */}
           <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-            <a href="#" className="text-lg font-medium text-gray-900">
+            <a href="#" className="text-xl font-medium text-gray-900">
               Cafe Menu
             </a>
-            <a href="#" className="text-lg font-medium text-gray-900">
+            <a href="#" className="text-xl font-medium text-gray-900">
               About Us
             </a>
-            <a href="#" className="text-lg font-medium text-gray-900">
+            <a href="#" className="text-xl font-medium text-gray-900">
               Find Us
             </a>
-            <a href="#" className="text-lg font-medium text-gray-900">
+            <a href="#" className="text-xl font-medium text-gray-900">
               Alowishus Catering
             </a>
           </PopoverGroup>
 
-          {/* ****************************** */}
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-5">
-            <a href="#" className="text-sm/6 font-semibold text-gray-900">
+          {/* Desktop Buttons */}
+          <div className="hidden lg:flex flex-1 justify-end items-center gap-5">
+            <a href="#" className="text-sm font-semibold text-gray-900">
               <ShoppingBagIcon
                 width={35}
-                className="hover:cursor-pointer bg-gray-50 hover:bg-gray-100 p-2 rounded-full shadow-lg shadow-gray-300 hover:scale-105 transition-all"
+                className="bg-gray-50 hover:bg-gray-100 p-2 rounded-full hover:scale-105 transition-all"
               />
             </a>
-            <button className="bg-gray-900 text-white p-3 rounded-full shadow-lg hover:scale-105 transition-all">
+            <button className="bg-gray-900 text-white p-3 rounded-full hover:scale-105 transition-all">
               Buy Gift Vouchers
             </button>
           </div>
-          {/* ****************************** */}
         </nav>
-        {/* ****************************** */}
+
+        {/* Mobile Menu */}
         <Dialog
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
@@ -164,11 +161,12 @@ const Header = () => {
                 <XMarkIcon aria-hidden="true" className="size-6" />
               </button>
             </div>
+
             <div className="mt-6 flow-root">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="space-y-2 py-6">
                   <Disclosure as="div" className="-mx-3">
-                    <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                    <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base font-semibold text-gray-900 hover:bg-gray-50">
                       Price list
                       <ChevronDownIcon
                         aria-hidden="true"
@@ -181,7 +179,7 @@ const Header = () => {
                           key={item.name}
                           as="a"
                           href={item.href}
-                          className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold text-gray-900 hover:bg-gray-50"
+                          className="block rounded-lg py-2 pr-3 pl-6 text-sm font-semibold text-gray-900 hover:bg-gray-50"
                         >
                           {item.name}
                         </DisclosureButton>
@@ -190,19 +188,19 @@ const Header = () => {
                   </Disclosure>
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Cafe Menu
                   </a>
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     About Us
                   </a>
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="block rounded-lg px-3 py-2 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Find Us
                   </a>
@@ -210,7 +208,7 @@ const Header = () => {
                 <div className="py-6">
                   <a
                     href="#"
-                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                    className="block rounded-lg px-3 py-2.5 text-base font-semibold text-gray-900 hover:bg-gray-50"
                   >
                     Alowishus Catering
                   </a>
@@ -219,8 +217,6 @@ const Header = () => {
             </div>
           </DialogPanel>
         </Dialog>
-
-        {/* ****************************** */}
       </header>
     </div>
   );
