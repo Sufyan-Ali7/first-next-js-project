@@ -18,7 +18,7 @@ const Explore = () => {
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-11/12 mx-auto">
           {/* Catering Card */}
-          <div className="p-8 cursor-pointer shadow-lg hover:shadow-xl rounded-lg bg-gray-100 hover:scale-105 transition-transform ">
+          <div className="p-8 cursor-pointer shadow-lg  hover:shadow-xl rounded-lg bg-gray-100 hover:scale-105 transition-transform ">
             <h2 className="text-3xl font-semibold text-gray-700">
               Our Catering
             </h2>
@@ -40,7 +40,7 @@ const Explore = () => {
           </div>
 
           {/* Food Card */}
-          <div className="p-8 cursor-pointer shadow-lg hover:shadow-xl rounded-lg bg-gray-100 hover:scale-105 transition-transform ">
+          <div className="p-8 cursor-pointer shadow-lg  hover:shadow-xl rounded-lg bg-gray-100 hover:scale-105 transition-transform ">
             <h2 className="text-3xl font-semibold text-gray-700">The Food</h2>
             <p className="py-3 text-gray-500 text-lg">
               Lorem ipsum dolor sit amet consectetur
@@ -60,7 +60,7 @@ const Explore = () => {
           </div>
 
           {/* Gelato Card */}
-          <div className="p-8 cursor-pointer shadow-lg hover:shadow-xl rounded-lg bg-gray-100 hover:scale-105 transition-transform ">
+          <div className="p-8 cursor-pointer shadow-lg  hover:shadow-xl rounded-lg bg-gray-100 hover:scale-105 transition-transform ">
             <h2 className="text-3xl font-semibold text-gray-700">The Gelato</h2>
             <p className="py-3 text-gray-500 text-lg">
               Lorem ipsum dolor sit amet consectetur
